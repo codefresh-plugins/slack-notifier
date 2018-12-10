@@ -77,7 +77,7 @@ const slack = new SlackWebhook(process.env.SLACK_HOOK_URL);
 
 slack.send({
   text: process.env.SLACK_TEXT,
-  attachments: process.env.ATTACHMENTS,
+  attachments: JSON.parse(process.env.ATTACHMENTS),
   username: process.env.SLACK_USER_NAME,
   icon_emoji: process.env.SLACK_ICON_EMOJI,
 });
