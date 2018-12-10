@@ -7,10 +7,10 @@ if (!process.env.SLACK_HOOK_URL) {
 
 const slack = new SlackWebhook(process.env.SLACK_HOOK_URL);
 
-const attachments = process.env.ATTACHMENTS ? JSON.parse(process.env.ATTACHMENTS) : undefined;
+const attachments = process.env.SLACK_ATTACHMENTS ? JSON.parse(process.env.SLACK_ATTACHMENTS) : undefined;
 
 if (!process.env.SLACK_TEXT && !attachments) {
-    console.error('SLACK_TEXT or ATTACHMENTS env variable should be present');
+    console.error('SLACK_TEXT or SLACK_ATTACHMENTS env variable should be present');
     process.exit(1);
 }
 

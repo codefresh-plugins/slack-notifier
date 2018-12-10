@@ -9,9 +9,9 @@ Slack notifications step
     title: Sending message to slack
     image: codefresh/slacknotifier
     environment:
-    - WEBHOOK_URL=${{SLACK_WEBHOOK_URL}}
+    - SLACK_HOOK_URL=${{SLACK_WEBHOOK_URL}}
     - SLACK_TEXT=${{SLACK_TEXT}}
-    - ATTACHMENTS=${{SLACK_ATTACHMENTS}}
+    - SLACK_ATTACHMENTS=${{SLACK_ATTACHMENTS}}
 ```
 
 Abilities: 
@@ -43,7 +43,7 @@ List of env variables
 ```
 
 SLACK_HOOK_URL - required
-ATTACHMENTS    - optional
+SLACK_ATTACHMENTS    - optional
 SLACK_TEXT     - optional
 SLACK_USER_NAME - optional
 SLACK_ICON_EMOJI - optional
