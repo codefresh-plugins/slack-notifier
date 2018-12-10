@@ -4,6 +4,9 @@ const SlackApi = require('../slack-api');
 class SimpleMode {
 
     static send() {
+        console.log('Choose simple mode');
+
+
         const attachments = process.env.SLACK_ATTACHMENTS ? JSON.parse(process.env.SLACK_ATTACHMENTS) : undefined;
 
         if (!process.env.SLACK_TEXT && !attachments) {

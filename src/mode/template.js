@@ -4,6 +4,7 @@ const SlackApi = require('../slack-api');
 class TemplateMode {
 
     static send() {
+        console.log('Choose template mode');
 
         if(process.env.SLACK_TEMPLATE_BODY){
             console.error('SLACK_TEMPLATE_BODY env variable should be present');
@@ -16,9 +17,8 @@ class TemplateMode {
         }
 
         const template = JSON.parse(process.env.SLACK_TEMPLATE_BODY);
-        const fields = JSON.parse(process.env.SLACK_TEMPLATE_FIELDS);
 
-        template.fields = fields;
+        template.fields = JSON.parse(process.env.SLACK_TEMPLATE_FIELDS);
 
         SlackApi.send(process.env.SLACK_TEXT, template, process.env.SLACK_USER_NAME, process.env.SLACK_ICON_EMOJI);
     }
