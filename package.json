@@ -1,0 +1,11 @@
+{
+  "name": "slack-notifier",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "slack-webhook": "^1.0.0"
+  }
+}
