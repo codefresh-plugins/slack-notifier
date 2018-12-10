@@ -1,5 +1,7 @@
 const SlackWebhook = require('slack-webhook');
 
+const _ = require('lodash');
+
 // 'https://hooks.slack.com/services/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'
 const slack = new SlackWebhook(process.env.SLACK_HOOK_URL);
 
@@ -74,10 +76,11 @@ const slack = new SlackWebhook(process.env.SLACK_HOOK_URL);
 //     icon_emoji: SLACK_ICON_EMOJI
 // });
 
+const attachments = process.env.ATTACHMENTS ? JSON.parse(process.env.ATTACHMENTS) : undefined;
 
 slack.send({
   text: process.env.SLACK_TEXT,
-  attachments: JSON.parse(process.env.ATTACHMENTS),
+  attachments: attachments,
   username: process.env.SLACK_USER_NAME,
   icon_emoji: process.env.SLACK_ICON_EMOJI,
 });
