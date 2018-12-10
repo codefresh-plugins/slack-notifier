@@ -10,8 +10,8 @@
     "slack-webhook": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-google": "^0.11.0",
     "eslint-plugin-import": "^2.14.0"
   }
