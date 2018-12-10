@@ -14,7 +14,7 @@ class TemplateMode {
             console.error('SLACK_TEMPLATE_FIELDS env variable should be present');
             process.exit(1);
         }
-        
+
         const template = JSON.parse(process.env.SLACK_TEMPLATE_BODY);
         const fields = JSON.parse(process.env.SLACK_TEMPLATE_FIELDS);
 
