@@ -59,15 +59,13 @@ steps:
       set:
         - CF_QUALITY: true
 
-
-  push_to_cfcr:
-    title: 'Pushing image to cfcr'
-    stage: push
+  PushingToDockerRegistry:
+    title: Pushing to Docker Registry
     type: push
-    image_name: codefresh/slacknotifier
-    registry: CFCR
-    candidate: ${{build_step}}
-    tags:
-    - ${{CF_BRANCH_TAG_NORMALIZED}}
-    - ${{CF_REVISION}}
-
+    candidate: '${{BuildingDockerImage}}'
+    tag: 'latest'
+    registry: dockerhub
+    when:
+      branch:
+        only:
+          - master
