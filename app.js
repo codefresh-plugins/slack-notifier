@@ -1,6 +1,6 @@
 const SlackWebhook = require('slack-webhook');
 
-//'https://hooks.slack.com/services/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'
+// 'https://hooks.slack.com/services/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'
 const slack = new SlackWebhook(process.env.SLACK_HOOK_URL);
 
 // slack.send('some text');
@@ -19,7 +19,6 @@ const slack = new SlackWebhook(process.env.SLACK_HOOK_URL);
 // SLACK_THUMB_URL="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/SquareLogo2.png";
 // SLACK_FOOTER="Helm Deployment";
 // SLACK_FOOTER_ICON="https://cloudposse.com/wp-content/uploads/sites/29/2018/02/kubernetes.png";
-
 
 
 // slack.send({
@@ -77,8 +76,8 @@ const slack = new SlackWebhook(process.env.SLACK_HOOK_URL);
 
 
 slack.send({
-    text: process.env.SLACK_TEXT,
-    attachments: process.env.ATTACHMENTS,
-    username: process.env.SLACK_USER_NAME,
-    icon_emoji: process.env.SLACK_ICON_EMOJI
+  text: process.env.SLACK_TEXT,
+  attachments: process.env.ATTACHMENTS,
+  username: process.env.SLACK_USER_NAME,
+  icon_emoji: process.env.SLACK_ICON_EMOJI,
 });
