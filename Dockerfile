@@ -1,6 +1,6 @@
 FROM node:10.13.0-alpine
 
-WORKDIR /root/isser
+WORKDIR /root/slack-notifier
 
 RUN apk add --no-cache bash git openssh-client
 
