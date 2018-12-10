@@ -9,12 +9,12 @@ stages:
 
 steps:
 
-#  install_dependencies:
-#    title: 'Installing testing dependencies'
-#    stage: preparation
-#    image: codefresh/node-tester-image:9.6.1
-#    commands:
-#        - yarn install --frozen-lockfile
+  install_dependencies:
+    title: 'Installing testing dependencies'
+    stage: preparation
+    image: codefresh/node-tester-image:9.6.1
+    commands:
+        - yarn install --frozen-lockfile
 #
 #  eslint:
 #    title: 'Running linting logic'
@@ -62,7 +62,7 @@ steps:
   PushingToDockerRegistry:
     title: Pushing to Docker Registry
     type: push
-    candidate: '${{BuildingDockerImage}}'
+    candidate: '${{build_step}}'
     tag: 'latest'
     registry: dockerhub
     when:
