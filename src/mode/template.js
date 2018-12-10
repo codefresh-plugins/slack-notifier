@@ -6,12 +6,12 @@ class TemplateMode {
     static send() {
         console.log('Choose template mode');
 
-        if(process.env.SLACK_TEMPLATE_BODY){
+        if(!process.env.SLACK_TEMPLATE_BODY){
             console.error('SLACK_TEMPLATE_BODY env variable should be present');
             process.exit(1);
         }
 
-        if(process.env.SLACK_TEMPLATE_FIELDS){
+        if(!process.env.SLACK_TEMPLATE_FIELDS){
             console.error('SLACK_TEMPLATE_FIELDS env variable should be present');
             process.exit(1);
         }
