@@ -9,11 +9,10 @@ const template = {
             "author_link":"https://cloudposse.com/wp-content/uploads/sites/29/2018/02/small-cute-robot-square.png",
             "author_icon":"https://g.codefresh.io/modules/cf.resources/images/codefresh.png",
             "thumb_url":"https://codefresh.io/docs/assets/brand/codefresh-social-logo.png",
-            "footer":"test",
             "fields":[
                 {
                     "title":"Project",
-                    "value":"Awesome Project",
+                    "value":process.env.CF_REPO_NAME,
                     "short":true
                 },
                 {
