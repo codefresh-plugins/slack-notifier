@@ -3,7 +3,8 @@ FROM node:10.13.0-alpine
 RUN apk add --no-cache bash git openssh-client
 
 # Create app directory
-WORKDIR /slacknotifier/
+WORKDIR /app/
+VOLUME /app
 
 COPY package.json ./
 
@@ -20,4 +21,4 @@ RUN apk add --no-cache --virtual deps python make g++ krb5-dev && \
 COPY . ./
 
 # run application
-CMD ["node", "index.js"]
+CMD ["node", "/app/index.js"]
