@@ -15,7 +15,7 @@ const template = {
                     "short":true
                 },
                 {
-                    "title":"Environment",
+                    "title":"Branch",
                     "value": process.env.CF_BRANCH_VERSION_NORMALIZED,
                     "short":true
                 }
