@@ -28,7 +28,7 @@ class DefaultTemplateMode {
 
     static send() {
 
-        if(process.env.CF_BRANCH){
+        if(!process.env.CF_BRANCH){
             console.error('Scm information doesnt present, this mode allow only for repo pipelines or pipelines that call use git trigger');
             process.exit(1);
         }
