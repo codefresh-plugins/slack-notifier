@@ -2,6 +2,9 @@ FROM node:10.13.0-alpine
 
 RUN apk add --no-cache bash git openssh-client
 
+# Create app directory
+WORKDIR /slacknotifier/
+
 COPY package.json ./
 
 COPY yarn.lock ./
