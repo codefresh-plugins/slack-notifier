@@ -11,7 +11,7 @@ const template = {
             "thumb_url":"https://codefresh.io/docs/assets/brand/codefresh-social-logo.png",
             "fields":[
                 {
-                    "title":"Project",
+                    "title":"Repository",
                     "value":process.env.CF_REPO_NAME,
                     "short":true
                 },
