@@ -74,7 +74,7 @@ steps:
     title: Sending message to slack
     image: codefresh/slacknotifier
     environment:
-      - SLACK_HOOK_URL=https://hooks.slack.com/services/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
+      - SLACK_HOOK_URL=${{HOOK_URL}}
       - MODE=default-template
     when:
       branch:
