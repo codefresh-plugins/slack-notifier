@@ -10,6 +10,9 @@ class SlackApi {
             attachments: attachments,
             username: username,
             icon_emoji: icon,
+        }).catch(function (err) {
+           console.error(`Cant send notification to slack , error : ${err}, check your SLACK_HOOK_URL`);
+           process.exitCode = 0;
         });
     }
 
