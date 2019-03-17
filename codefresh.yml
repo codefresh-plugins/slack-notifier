@@ -6,7 +6,7 @@ steps:
     title: "Building production image"
     type: build
     dockerfile: Dockerfile
-    image_name: codefreshplugins/slacknotifier
+    image_name: codefreshplugins/slack-notifier
     metadata:
       set:
         - CF_QUALITY: true
@@ -15,7 +15,7 @@ steps:
     title: Pushing to Docker Registry
     type: push
     candidate: '${{build_step}}'
-    tag: 'latest'
+    tag: "0.1"
     registry: dockerhub
     when:
       branch:
