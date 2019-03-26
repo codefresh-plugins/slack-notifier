@@ -8,7 +8,7 @@ sources:
 maintainers: # (optional)
   - name: Pavel Kostohrys
     email: pavel@codefresh.io
-icon: https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png
+icon: https://github.com/codefresh-plugins/slack-notifier/blob/master/icon.jpg
 envs:
   - name: SLACK_HOOK_URL
     type: required
