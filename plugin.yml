@@ -1,6 +1,8 @@
 image: codefresh/slacknotifier
 version: 0.1.0
-description: Send message to slack channel
+description: Send message to slack 
+categories:
+  - messaging
 keywords:
   - slack
 sources:
