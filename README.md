@@ -7,7 +7,7 @@ Slack notifications step
 
  SendToSlack:
     title: Sending message to slack
-    image: codefresh/slacknotifier
+    image: codefreshplugins/slacknotifier
     environment:
     - SLACK_HOOK_URL=${{SLACK_WEBHOOK_URL}}
     - SLACK_TEXT=${{SLACK_TEXT}}

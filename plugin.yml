@@ -1,4 +1,4 @@
-image: codefresh/slacknotifier
+image: codefreshplugins/slacknotifier
 version: 0.1.0
 description: Send message to slack 
 categories:
